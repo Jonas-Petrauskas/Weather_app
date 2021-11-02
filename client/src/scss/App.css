@@ -1,1 +1,140 @@
-/* No CSS *//*# sourceMappingURL=App.css.map */
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  background-image: url("../Assets/background-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.App {
+  display: -ms-grid;
+  display: grid;
+  width: 25rem;
+  height: 80%;
+  -ms-grid-rows: 0.6fr 0.4fr;
+      grid-template-rows: 0.6fr 0.4fr;
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 1.25rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-container__input {
+  width: 12.5rem;
+  height: 1.875rem;
+  text-align: center;
+  border-radius: 10px;
+  outline: transparent;
+  border: none;
+  margin-top: 1.875rem;
+}
+
+.search__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.25rem;
+}
+
+.search__image {
+  max-width: 100%;
+}
+
+.city-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.city-container__button {
+  font-family: "Roboto", sans-serif;
+  border: none;
+  border-radius: 0.625rem;
+  width: 6.25rem;
+  height: 1.875rem;
+}
+
+.city-container__button:hover {
+  background-color: #d77d73;
+  color: white;
+}
+
+.city-container__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation-name: FadeIn;
+          animation-name: FadeIn;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+@-webkit-keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    max-width: 90%;
+    height: 90vh;
+  }
+}
+/*# sourceMappingURL=App.css.map */

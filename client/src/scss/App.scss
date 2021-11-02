@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  background-image: url("../Assets/background-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.App {
+  display: grid;
+  width: 25rem;
+  height: 80%;
+  grid-template-rows: 0.6fr 0.4fr;
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 1.25rem;
+  // centering the app
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-container__input {
+  width: 12.5rem;
+  height: 1.875rem;
+  text-align: center;
+  border-radius: 10px;
+  outline: transparent;
+  border: none;
+  margin-top: 1.875rem;
+}
+
+.search__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2.25rem;
+}
+
+.search__image {
+  max-width: 100%;
+}
+
+.city-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.city-container__button {
+  font-family: "Roboto", sans-serif;
+  border: none;
+  border-radius: 0.625rem;
+  width: 6.25rem;
+  height: 1.875rem;
+}
+
+.city-container__button:hover {
+  background-color: rgb(215, 125, 115);
+  color: white;
+}
+
+.city-container__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation-name: FadeIn;
+  animation-duration: 2s;
+  transition-timing-function: linear;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// for mobiles
+@media only screen and (max-width: 600px) {
+  .App {
+    max-width: 90%;
+    height: 90vh;
+  }
+}
