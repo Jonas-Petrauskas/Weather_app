@@ -54,7 +54,34 @@ function App() {
     });
   }, []);
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <div className="search-container">
+        <input
+          className="search-container__input"
+          placeholder="Enter the city"
+          type="text"
+          onChange={(e) => setQuery(e.target.value)}
+          value={query}
+          onKeyPress={search}
+        />
+        {typeof weather.main !== "undefined" ? (
+          <div className="search__info">
+            <img
+              className="search__image"
+              src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+              alt="weather icon"
+            />
+            <div>{weather.weather[0].main}</div>
+            <div>{weather.name}</div>
+            <div>{Math.round(weather.main.temp)}°C</div>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
+    </div>
+  );
 }
 
 export default App;
