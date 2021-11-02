@@ -1,4 +1,4 @@
-const {REACT_APP_API_KEY} = process.env;
+const { REACT_APP_API_KEY } = process.env;
 const API_BARCELONA = `https://api.openweathermap.org/data/2.5/weather?q=Barcelona&units=metric&appid=${REACT_APP_API_KEY}`;
 const API_LONDON = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${REACT_APP_API_KEY}`;
 
