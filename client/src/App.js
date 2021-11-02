@@ -80,6 +80,45 @@ function App() {
           ""
         )}
       </div>
+      <div className="city-container">
+        <div className="city-container__barcelona">
+          <button
+            className="city-container__button"
+            onClick={() => setShowBarcelona(!showBarcelone)}
+          >
+            {showBarcelone ? cityBarcelona : cityBarcelona}
+          </button>
+          {showBarcelone && (
+            <div className="city-container__info">
+              <img
+                src={`http://openweathermap.org/img/wn/${iconBarcelona}@2x.png`}
+                alt="weather icon"
+              />
+              <div>{weatherBarcelona}</div>
+              <div>{Math.round(temperatureBarcelona)}°C</div>
+            </div>
+          )}
+        </div>
+
+        <div className="city-container__london">
+          <button
+            className="city-container__button"
+            onClick={() => setShowLondon(!showLondon)}
+          >
+            {showLondon ? cityLondon : cityLondon}
+          </button>
+          {showLondon && (
+            <div className="city-container__info">
+              <img
+                src={`http://openweathermap.org/img/wn/${iconLondon}@2x.png`}
+                alt="weather icon"
+              />
+              <div>{weatherLondon}</div>
+              <div>{Math.round(temperatureLondon)}°C</div>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
