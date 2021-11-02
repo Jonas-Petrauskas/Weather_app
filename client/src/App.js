@@ -36,6 +36,24 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    ApiClient.getBarcelonaWeather().then((data) => {
+      setWeatherBarcelona(data.weather[0].main);
+      setCityBarcelona(data.name);
+      setTemperatureBarcelona(data.main.temp);
+      setIconBarcelona(data.weather[0].icon);
+    });
+  }, []);
+
+  useEffect(() => {
+    ApiClient.getLondonWeather().then((data) => {
+      setWeatherLondon(data.weather[0].main);
+      setCityLondon(data.name);
+      setTemperatureLondon(data.main.temp);
+      setIconLondon(data.weather[0].icon);
+    });
+  }, []);
+
   return <div className="App"></div>;
 }
 
