@@ -21,6 +21,21 @@ function App() {
   const [showBarcelone, setShowBarcelona] = useState(false);
   const [showLondon, setShowLondon] = useState(false);
 
+  const { REACT_APP_API_KEY } = process.env;
+
+  const search = (event) => {
+    if (event.key === "Enter") {
+      fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${REACT_APP_API_KEY}`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setWeather(data);
+          setQuery("");
+        });
+    }
+  };
+
   return <div className="App"></div>;
 }
 
